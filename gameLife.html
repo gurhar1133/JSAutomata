@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Game of life</title>
+    <script
+    src="https://code.jquery.com/jquery-3.5.0.slim.min.js"
+    integrity="sha256-MlusDLJIP1GRgLrOflUQtshyP0TwT/RHXsI1wWGnQhs="
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  </head>
+  <style>
+    body{
+      /* background-color: #8a70db; */
+    }
+
+    .tdSmallDead{
+
+      background-color: #8a70db;
+      color: #8a70db;
+      height: 8px;
+      width: 8px;
+      text-align: center;
+      font-size: 1px;
+    }
+    .tdSmallLive{
+
+      background-color: #ffea00;
+      color: #ffea00;
+      height: 8px;
+      width: 8px;
+      border: 1px;
+      border-radius: 2px;
+      text-align: center;
+      font-size: 1px;
+    }
+    .live{
+      height: 4px;
+      width: 4px;
+      /*#96f776*/
+      border: 1px solid #8a70db;
+      background-color: #ffea00;
+      border-radius: 0%;
+      display: inline-block;
+    }
+    .dead{
+      height: 4px;
+      width: 4px;
+      /*#96f776*/
+      border: 1px solid #8a70db;
+      background-color: #8a70db;
+      border-radius: 0%;
+      display: inline-block;
+    }
+
+  </style>
+  <body>
+    <div class="container">
+      <nav id="nav" class="navbar navbar-default navbar-fixed-top" style="background-color: #ebe5f5;">
+        <div class="container" >
+
+          <!-- This is the hamburger button -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <div class="">
+          <img src="/Users/GurharEffinKhalsa/Desktop/FullStackCourse/logo.jpg" alt="oop">
+        </div>
+
+
+        </div >
+
+        <!-- This is what gets collapsed by the hamburger button -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+
+          <ul class="nav navbar-nav">
+
+
+            <li><a href="./1dcell.html">1d cellular</a></li>
+            <li><a href="">SpiritNet</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Donate</a></li>
+          </ul>
+        </div>
+      </div>
+      </nav>
+    </div>
+
+
+
+
+    <div class="container">
+      <div class="jumbotron">
+        <br>
+        <br>
+        <br>
+
+
+        <p>For Emma Bean,<br> brought to you by Harbo.</p>
+
+      <h3>Game of Life: </h3>
+      <p> The <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">game of life</a>, developed by mathematician John Conway,
+      is a popular cellular automation in which ... well, just try it out.</p>
+      <br><br>
+      <div class="container" id="bottom" style="background-color: #8a70db;border: 10px solid #ffd500; border-radius:18px;">
+
+        <table  id="buttTable" align="center">
+
+        </table>
+
+      </div>
+      <p>I have provided an initial configuration of cells for you.
+      You can clear it and draw your own initial configuration, or try the
+    one I have provided</p>
+    <div class="container">
+      <button style="background: #8a70db;" id="playPause" class="btn btn-primary btn-lg" onclick="play()"> Fire It Up! </button>
+      <button style="background: #8a70db;" id="clear" class="btn btn-primary btn-lg" onclick="clearTheBoard()"> Clear Board </button>
+      <button style="background: #8a70db;" id="backToStart1" class="btn btn-primary btn-lg" onclick="startState1()"> Back to Start State 1 </button>
+    </div>
+    </div>
+    </div>
+
+    <script
+    src="http://code.jquery.com/jquery-3.1.1.js"
+    integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+    crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script src="./gameLife.js"></script>
+
+  </body>
+</html>

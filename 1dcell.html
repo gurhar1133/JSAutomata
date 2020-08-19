@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>1dCellular</title>
+    <script
+    src="https://code.jquery.com/jquery-3.5.0.slim.min.js"
+    integrity="sha256-MlusDLJIP1GRgLrOflUQtshyP0TwT/RHXsI1wWGnQhs="
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  </head>
+  <style>
+    body{
+      /* background-color: #8a70db; */
+    }
+
+    .tdSmallDead{
+
+      background-color: #8a70db;
+      color: #8a70db;
+      height: 8px;
+      width: 8px;
+      text-align: center;
+      font-size: 1px;
+
+    }
+    .tdSmallLive{
+
+      background-color: #ffea00;
+      color: #ffea00;
+      height: 8px;
+      width: 8px;
+      border: 1px;
+      border-radius: 2px;
+
+      text-align: center;
+      font-size: 1px;
+    }
+    .live{
+      height: 4px;
+      width: 4px;
+      /*#96f776*/
+      border: 1px solid #8a70db;
+      background-color: #ffea00;
+      border-radius: 0%;
+      display: inline-block;
+    }
+    .dead{
+      height: 4px;
+      width: 4px;
+      /*#96f776*/
+      border: 1px solid #8a70db;
+      background-color: #8a70db;
+      border-radius: 0%;
+      display: inline-block;
+    }
+
+  </style>
+  <body>
+    <nav id="nav" class="navbar navbar-default navbar-fixed-top" style="background-color: #ebe5f5;">
+      <div class="container" >
+
+        <!-- This is the hamburger button -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div class="">
+        <img src="/Users/GurharEffinKhalsa/Desktop/FullStackCourse/logo.jpg" alt="oop">
+      </div>
+
+
+      </div >
+
+      <!-- This is what gets collapsed by the hamburger button -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+
+        <ul class="nav navbar-nav">
+
+
+          <li><a href="./gameLife.html">Game of Life</a></li>
+          <li><a href="">SpiritNet</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">Donate</a></li>
+        </ul>
+      </div>
+    </div>
+    </nav>
+
+
+
+
+
+
+
+
+
+
+    <div class="container">
+      <div class="jumbotron">
+        <br><br><br><br>
+        <p>For Emma Bean,<br> brought to you by Harbo.</p>
+        <h2>1D Cellular Automation</h2>
+        <p>A set of rules for 1d cellular automation were developed by mathematician Stephen Wolfram. They specify rules for generating new cells given a previous row generation of cells.
+        It is amazing to see how mechanical rules operating on certain initial cell states can give rise to aestetic, and often lifelike animations.
+
+
+        <br><br>    Below are options to see some of them in action.
+
+        <br><br>    Press pause if you want to halt animations.
+        <br><br>    Press one of the rule buttons to resume
+              the action.
+          <a href="https://mathworld.wolfram.com/CellularAutomaton.html"> More on wolfram rules!</a></li>
+      </p>
+      <div class="container" id="bottom" style="background-color: #8a70db;border: 10px solid #ffd500; border-radius:18px;">
+
+        <table  id="buttTable" align="center">
+
+        </table>
+
+      </div>
+      <p></p>
+    <div class="container">
+
+      <legend>WOLFRAM RULES:
+      <button style="background: #8a70db;" onclick="switchTo30()" class="btn btn-primary">Rule 30</button>
+      <button style="background: #8a70db;" onclick="switchTo90()" class="btn btn-primary">Rule 90</button>
+      <button style="background: #8a70db;" onclick="switchTo126()" class="btn btn-primary">Rule 126</button>
+      <button style="background: #8a70db;"onclick="switchTo182()" class="btn btn-primary">Rule 182 (coming soon)</button>
+      <br>
+
+      </legend>
+      <button id="playPause" style="background: #8a70db;" onclick="halt()" class="btn btn-primary">Pause</button>
+      <button style="background: #8a70db;" id="clear" class="btn btn-primary" onclick="clearTheBoard()"> Clear Board </button>
+      <button style="background: #8a70db;" id="clear" class="btn btn-primary" onclick="gameLyfe()"> Crazify </button>
+      <p>You like the Crazify button? Check out my <a href="/Users/GurharEffinKhalsa/Desktop/FullStackCourse/gameLife.html">game of life</a> automation.</p>
+
+
+    </div>
+    </div>
+    </div>
+
+    <script
+    src="http://code.jquery.com/jquery-3.1.1.js"
+    integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+    crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script src="./1dcell.js"></script>
+
+  </body>
+</html>
